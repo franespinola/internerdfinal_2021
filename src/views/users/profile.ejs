@@ -42,6 +42,14 @@
                             </div>
                         </div>
                     </div>
+                    <% if(user && user.user_type.data[0]==1){ %>
+                        <a href="/products/create">
+                            <button class="btn btn-outline-danger">Crear Productos</button>
+                        </a>
+                        <a href="/products/list">
+                            <button class="btn btn-outline-danger">Editar Productos</button>
+                        </a>
+                    <% } %>
                     
                 </div>
                 <div class="col-md-8">

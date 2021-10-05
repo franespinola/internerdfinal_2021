@@ -98,6 +98,7 @@ const productsController = {
                 res.render('products/list', {
                     pageTitle: 'Todos los productos',
                     listado: listado,
+                    session: req.session.userLogged
 
                 })
 

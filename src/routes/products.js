@@ -22,7 +22,7 @@ router.get('/create', adminMiddleware, productsController.create);
 router.get('/edit/:id', productsController.edit);
 router.get('/category/:categoryName', productsController.category);
 router.get('/wires/:wireName', productsController.wires);
-router.get('/list', productsController.allProducts);
+router.get('/list',adminMiddleware,productsController.allProducts);
 //---POST--//
 router.post('/create', uploadFile.single('image'), productsController.createPost) //uploadFile.single('en el formulario me fijo el name q use')
 router.patch('/edit/:id',uploadFile.single('imagen'),productsController.update);

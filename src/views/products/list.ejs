@@ -18,10 +18,16 @@
                                 $
                                 <%= product.price%>
                             </p>
-                            <div class="contenedor-btn">
-                                <button class="btn button-edit">comprar</button>
-                               
-                            </div>
+                            <% if(session && session.user_type.data[0]==1){ %>
+                                <div class="contenedor-btn">
+                                    <a href="/products/edit/<%=product.idProduct%>" class="btn button-edit">
+                                        Editar
+                                    </a>
+                                    <form action="/products/delete/<%=product.idProduct%>?_METHOD=DELETE" method="POST">
+                                        <button type="submit" class="btn button-edit">Eliminar</button>
+                                    </form>
+                                </div>
+                            <% } %>
                         </div>
                     </div>
                     <%})%>
