@@ -451,6 +451,7 @@ button {
 
 .contenedor-btn button {
     width: 70%;
+    
 }
 
 textarea {
@@ -483,16 +484,18 @@ select {
 }
 
 .product-card {
+    background-color: white;
     padding: 1rem;
-    border: solid 2px black;
+    border: solid 1px #9e9e9e;
     transition: all 0.5s;
-    
+    border-radius: 8px;
+    box-shadow: 0px 0px 4px black;
 }
 
-
-/* .product-card:hover {
-    transform: scale(1.05, 1.05)
-} */
+.product-card:hover {
+    box-shadow: 0px 0px 15px rgb(151, 91, 36);
+    transform: scale(1.05);
+}
 
 .product-card p {
     margin: 0;
@@ -643,7 +646,9 @@ select {
         justify-content: space-between;
     }
     .contenedor-btn button {
-        width: 50%;
+       
+        width: 96%;
+        margin-right: 51px
     }
     .contenedor-btn button[type="submit"] {
         order: 1;
@@ -690,4 +695,72 @@ color: #D00000;
 
 .icono-escudo {
     width: 350px;
+}
+
+.imagen-productos {
+    display: block;
+    max-width: 230px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CARRITO */
+
+.cart-body {
+    min-height: 200px;
+    text-align: -webkit-center;
+    margin-bottom: 30px;
+}
+
+.body {
+    max-width: 930px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.separador {
+    margin-left: 35%;
+}
+
+.elementos {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.imagen-carrito {    
+    display: block;
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+}
+
+.total {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.separador-tb {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.delete {
+    border-radius: 100%;
+    border: 1px solid;
+    padding: 5px;
+    height: 37px;
+    width: 32px;
+    font-weight: bold;
+    font-family: revert;
+    color: #db1b1b;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px black;
 }
