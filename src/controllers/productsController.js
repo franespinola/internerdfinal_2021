@@ -40,7 +40,9 @@ const productsController = {
             redes,
             categorias,
             product: products.filter(product => product.dataValues.idProduct == req.params.id)[0]
+            
         });
+        
     },
     category: (req, res) => {
 
