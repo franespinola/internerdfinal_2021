@@ -6,12 +6,12 @@
         <%- include('../../partials/header')%>
             <div class="products-container section">
                 <%listado.forEach(product=>{%>
-                    <div class="product-card" data-id="<%= product.idProduct%>">
+                    <div class="product-card" id="<%= product.idProduct%>">
                         <h3>
                             <%= product.name%>
                         </h3>
                         <div>
-                            <img src="<%= product.image%>" alt="Imagen de <%= product.name%>">
+                            <img src="<%= product.image%>" alt="Imagen de <%= product.name%>" class="imagen-productos">
                         </div>
                         <div>
                             <p class="precio">
@@ -24,7 +24,7 @@
                                         Editar
                                     </a>
                                     <form action="/products/delete/<%=product.idProduct%>?_METHOD=DELETE" method="POST">
-                                    <button type="submit" class="btn button-edit">Eliminar</button>
+                                    <button type="submit" class="btn button-edit" >Eliminar</button>
                                     </form>
                                    
                                 </div>
@@ -38,6 +38,7 @@
                     <%})%>
             </div>
             <%- include('../../partials/footer')%>
+            <script type="module" src="/Public/js/carrito.js"></script>
     </body>
 
 </html>
