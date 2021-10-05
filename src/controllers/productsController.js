@@ -165,7 +165,7 @@ const productsController = {
                 idProduct: req.params.id
             }
         })
-        res.redirect('/');
+        res.redirect('/products/list');
     }
 }
 
