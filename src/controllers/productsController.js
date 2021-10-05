@@ -151,7 +151,7 @@ const productsController = {
                 data.precio != product.price ? dataUpdated.price = parseInt(data.precio) : '';
                 data.categoria != product.categories_idCategory ? dataUpdated.categories_idCategory = data.categoria : '';
                 data.tipoRed != product.editorials_idEditorial ? dataUpdated.editorials_idEditorial = data.tipoRed : '';
-                req.file ? dataUpdated.image = req.file.filename : '';
+                req.file ? dataUpdated.image = "/public/img/"+req.file.filename : '';
                 return db.Product.update(dataUpdated, {
                     where: { idProduct: req.params.id }
                 })
