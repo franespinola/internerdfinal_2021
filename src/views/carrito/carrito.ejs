@@ -1,44 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head')%>
-
-    <body>
-
-                    
-        <%- include('../partials/header')%>
-            <section class="section producto">
-                <h1>CARRITO</h1>
-                <br>
-                <table>
-                    <tr>
-                        <td>Nombre</td>
-                        <td>Precio</td>
-                    </tr> 
-                    <% total = 0 %>
-                        <%carrito.forEach(product=>{%>
-                            <% total +=  product.price %>
-                    <tr> 
-                        <td><%= product.name%></td>
-                        <td> $
-                            <%= product.price%></td>
-                    </tr>
-                        <%})%>
-                    <tr>
-                    
-                        <td>TOTAL</td>
-                        <td>$ <%= total %></td>
-                    </tr>
-                    
-                </table>
-                
-
-                
-            
-                </section>
-
-            <%- include('../partials/footer')%>
-                <script src="/public/js/app.js">
-                </script>
-    </body>
+<body>
+    <%- include('../partials/header')%>
+    <div class="cart-body">
+        <h3>Tus productos agregados</h3>
+        <div class="body">
+            <div id="carrito-body"></div>
+            <h5 id="vacio"></h5>
+            <hr>
+            <div class="elementos">
+                <h2 class="total">Total</h2>
+                <h2 id="precio-total"></h2>
+            </div>
+            <hr>
+            <div class="separador-tb">
+                <a href="/" class="btn">Continuar comprando</a>
+                <a href="/users/login" class="btn separador">Finalizar compra</a>
+            </div>
+        </div>
+    </div>
+    <%- include('../partials/footer')%>
+    <script src="/public/js/app.js"></script>
+</body>
 
 </html>
