@@ -1,0 +1,6 @@
+node_modules/
+package-lock.json
+mockups/
+wireframes/
+.env
+Public/img
