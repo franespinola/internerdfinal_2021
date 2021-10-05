@@ -105,5 +105,11 @@ switch(urlPosition)
         break;*/
 }
 
+const carrito=document.getElementById("carrito")
+carrito.addEventListener("click",()=>
+{
+    window.location.href="/carrito";
+})
+
 
 /*VALIDACIÓN FORMULARIO LOGIN : SIN TERMINAR - NO FUNCIONA 14/09*/
