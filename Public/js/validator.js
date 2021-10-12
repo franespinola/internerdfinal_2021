@@ -104,7 +104,7 @@ switch(urlPosition)
         });
         break;*/
 }
-
+/*
 const carrito=document.getElementById("carrito")
 carrito.addEventListener("click",()=>
 {

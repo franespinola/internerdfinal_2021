@@ -82,7 +82,26 @@ const APIController = {
             .then(product => {
                 res.send(product);
             })
+    },
+    dashboard:async(req,res)=>{
+        let element=[]
+        element.push({
+        title:'Total Products',
+        icon:0,
+        data:await db.Product.count(),
+        
+    })
+        element.push({
+        title:'Total users',
+        icon:1,
+        data:await db.User.count(),
+        
+    } )
+        res.send(element)
+
     }
+    
+    
 }
 
 module.exports = APIController;
