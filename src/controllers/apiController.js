@@ -46,15 +46,15 @@ const APIController = {
             .then(products => {
                 const data = {}
                 data.count = products.length;
-                data.countByCategory = {
-                    Coleccionable: products.filter(product => product.categories.category_name == 'Coleccionable').length,
-                    Libros: products.filter(product => product.categories.category_name == 'Libros').length,
-                    Comics: products.filter(product => product.categories.category_name == 'Cómics').length,
-                    Escritorio: products.filter(product => product.categories.category_name == 'Escritorio').length,
-                    Ropa: products.filter(product => product.categories.category_name == 'Ropa').length,
-                    Coleccionable: products.filter(product => product.categories.category_name == 'Coleccionable').length,
-                    Otros: products.filter(product => product.categories.category_name == 'Otros').length
-                }
+                data.countByCategory = [
+                    {category:'Coleccionable',count:products.filter(product => product.categories.category_name == 'Coleccionable').length},
+                    {category:'Libros', count:products.filter(product => product.categories.category_name == 'Libros').length},
+                   {category:'Comics', count:products.filter(product => product.categories.category_name == 'Cómics').length},
+                    {category:'Escritorio', count:products.filter(product => product.categories.category_name == 'Escritorio').length},
+                    {category:'Ropa',count:products.filter(product => product.categories.category_name == 'Ropa').length},
+                    {category:'Coleccionable',count: products.filter(product => product.categories.category_name == 'Coleccionable').length},
+                   {category:'Otros',count: products.filter(product => product.categories.category_name == 'Otros').length}
+                ]
                 data.countByWire = {
                     Marvel: products.filter(product => product.editorials.editorial_name == 'Marvel').length,
                     DC: products.filter(product => product.editorials.editorial_name == 'DC').length,
